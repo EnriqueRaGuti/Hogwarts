@@ -1,0 +1,47 @@
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        Hogwarts
+      </a>
+    </div>
+</nav>
+  <div class="contenedorini">
+    <!-- <img src="assets/hogwarts.jpg" class="img-fluid" alt="..."> -->
+    <div class="logo">
+      <img class="img" src="assets/escudo.png">
+    </div>
+    <div class="titulo">
+      Bienvenido a La escuela de Hechicería y brujería Hogwarts
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          Sección de personajes
+          <div class="dropdown" style="margin-top: 20px;">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Seleccionar Casa
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" *ngFor="let c of casas" (click)="irCasa(c.nombre)">{{c.nombre}}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          Sección de estudiantes 
+          <br><br>
+          <button class="btn btn-secondary" type="button" (click)="irEstudiantes()">
+            Estudiantes
+          </button>
+        </div>
+        <div class="col">
+          Sección de profesores 
+          <br><br>
+          <button class="btn btn-secondary" type="button" (click)="irProfesores()">
+            Profesores
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 

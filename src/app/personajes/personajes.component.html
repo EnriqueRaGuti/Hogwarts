@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Hogwarts</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" (click)="volver()">Volver</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="contenedor">
+    <div class="logo-casa">
+      <img class="img" src="assets/{{nombreCasa}}.png">
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <input type="text" class="form-control" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
+        </div>
+      </div>
+    </div>
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Patronus</th>
+          <th scope="col">Age</th>
+          <th scope="col">Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let d of datos | filter:filterPost">
+          <th>{{d.name}}</th>
+          <td>{{d.patronus}}</td>
+          <td>{{2021-d.yearOfBirth}}</td>
+          <td><img class="img-perfil" src="{{d.image}}"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  

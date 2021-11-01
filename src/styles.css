@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family: 'Fruktur';
+    src : '../assets/fonts/Fruktur-Regular.ttf';
+}
+
+.contenedor {
+    width: 90%;
+    margin-left: 5%;
+}
+.img-perfil {
+    width: 40px;
+    border-radius: 5px;
+}
